@@ -1,7 +1,6 @@
 import ShowAnimalCard from "./components/ShowAnimalCard"
 
 function App(){
-
   return (
 <ShowAnimalCard/>
   )

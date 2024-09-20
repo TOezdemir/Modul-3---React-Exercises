@@ -3,7 +3,7 @@ import animals from "../database/data"
 
 function ShowAnimalCard(){
     return(
-        <div>{animals.map((animal)=>(
+        <div className="flex flex-wrap justify-around">{animals.map((animal)=>(
             <AnimalCard 
             key={animal.name} 
             name={animal.name} 

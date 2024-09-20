@@ -1,7 +1,9 @@
+import ShowAnimalCard from "./components/ShowAnimalCard"
+
 function App(){
 
   return (
-<div>Hi!</div>
+<ShowAnimalCard/>
   )
 }
 

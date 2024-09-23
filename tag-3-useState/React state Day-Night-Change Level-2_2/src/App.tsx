@@ -10,7 +10,7 @@ const [isDarkMode, setIsDarkMode] = useState(false)
     "mt-72 text-center text-white font-bold text-8xl"}>
       {isDarkMode ? "Day" : "Night"}
     </h1>
-    <Switch/>
+    <Switch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
     </div>
     
   )

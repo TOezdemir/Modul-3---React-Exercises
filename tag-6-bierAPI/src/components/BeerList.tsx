@@ -36,22 +36,25 @@ function BeerList() {
   }
 
   return (
-    <div>
-      {beers.map((el) => (
-        <div className="flex">
-            <div className="flex flex-row">
-                <img className="w-72 h-72 object-cover" src={el.image_url} alt={el.name} />    
-            </div>
-            <div className="flex flex-col">
-                <h2>{el.name}</h2>
-                <p>{el.tagline}</p>
-                <p>Created by: {el.name}</p>
-                <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-2xl">Details</button>   
-            </div>
-            <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"/>
-          </div>
-      ))}
-    </div>
+<div className="p-32"> {/* Fügt Padding um den gesamten Inhalt hinzu */}
+  {beers.map((el) => (
+    <> 
+      <div className="flex flex-col md:flex-row items-center mb-4"> 
+        <img className="w-52 h-52 object-cover rounded-lg mb-4 md:mb-0 md:mr-4" src={el.image_url} alt={el.name} /> 
+        <div className="flex flex-col self-center text-left pl-10"> 
+          <h2 className="text-2xl font-semibold mb-2">{el.name}</h2>
+          <p className="mb-2">{el.tagline}</p>
+          <p className="text-gray-600 mb-4">Created by: {el.name}</p> 
+          <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-2xl w-32"> {/* Button auf volle Breite strecken */}
+            Details
+          </button>
+        </div>
+      </div>
+      <hr className="w-full h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" /> 
+    </>
+  ))}
+</div>
+    
   );
 };
 

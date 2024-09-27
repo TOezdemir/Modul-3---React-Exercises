@@ -36,7 +36,7 @@ function BeerList() {
   }
 
   return (
-    <ul>
+    <div>
       {beers.map((el) => (
         <div className="flex">
             <div className="flex flex-row">
@@ -49,10 +49,9 @@ function BeerList() {
                 <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-2xl">Details</button>   
             </div>
             <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"/>
-          {/* Weitere Details nach Bedarf anzeigen */}
           </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

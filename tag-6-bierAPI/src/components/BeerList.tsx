@@ -40,7 +40,7 @@ function BeerList() {
   {beers.map((el) => (
     <> 
       <div className="flex flex-col md:flex-row items-center mb-4"> 
-        <img className="w-52 h-52 object-cover rounded-lg mb-4 md:mb-0 md:mr-4" src={el.image_url} alt={el.name} /> 
+        <img className="w-64 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-4" src={el.image_url} alt={el.name} /> 
         <div className="flex flex-col self-center text-left pl-10"> 
           <h2 className="text-2xl font-semibold mb-2">{el.name}</h2>
           <p className="mb-2">{el.tagline}</p>

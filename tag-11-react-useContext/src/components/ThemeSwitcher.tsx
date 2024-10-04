@@ -13,11 +13,12 @@ export interface ThemeContextProviderProps{
 function ThemeSwitcher(){
     const {theme, toggleTheme} = useThemeContext()
     return(
-        <button onClick={toggleTheme}>Switch Theme (current: {" "}
-        { theme === "light"
-        ? "light"
-        : theme === "dark"
-        ? "dark"
+        <button className="py-2 px-2 cursor-pointer text-lg"
+        onClick={toggleTheme}>Switch Theme (current: {" "}
+        { theme === "light" 
+        ? "light" 
+        : theme === "dark" 
+        ? "dark" 
         : "blue"})</button>
     )
 }

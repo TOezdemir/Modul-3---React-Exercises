@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme{
+    height: 100%
+  }
+  
+  .theme--dark{
+    background-color: #222;
+    color: white
+  }
+
+  .theme--blue{
+    background-color: mediumslateblue;
+    color: white
+  }

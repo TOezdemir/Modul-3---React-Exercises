@@ -1,5 +1,3 @@
-
-
 export const cars = [
     {
         id: 1,

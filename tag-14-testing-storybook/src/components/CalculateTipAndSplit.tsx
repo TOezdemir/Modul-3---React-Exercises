@@ -6,7 +6,7 @@ interface TipCalculatorProps {
     serviceLevel?: "bad" | "average" | "good";
   }
 
-const CalculateTipAndSplit: React.FC<TipCalculatorProps> = ({ billAmount = 0, numPeople = 1, serviceLevel = 'average' }) => {
+const CalculateTipAndSplit= ({ billAmount = 0, numPeople = 1, serviceLevel = 'average' }: TipCalculatorProps) => {
 
     // Trinkgeldprozentsatz basierend auf Service-Level bestimmen
     let tipPercentage: number;
@@ -33,7 +33,7 @@ const CalculateTipAndSplit: React.FC<TipCalculatorProps> = ({ billAmount = 0, nu
     // Betrag pro Person berechnen
     const amountPerPerson = tipAmount / numPeople;
   
-    // Ausgabefelder im HTML aktualisieren
+    // Eingabefelder greifen?
     const [tipAmountState, setTipAmountState] = useState<string | null>(null);
     const [totalAmountState, setTotalAmountState] = useState<string | null>(null);
     const [amountPerPersonState, setAmountPerPersonState] = useState<string | null>(null);
@@ -71,24 +71,22 @@ const CalculateTipAndSplit: React.FC<TipCalculatorProps> = ({ billAmount = 0, nu
       )
 }
   
-const calculateButton = document.querySelector("button");
-if (calculateButton) {
-    calculateButton.addEventListener("click", () => {
-      // Werte aus den Eingabefeldern abrufen
-      const billInput = document.getElementById("billAmount") as HTMLInputElement;
-      const peopleInput = document.getElementById("numPeople") as HTMLInputElement;
-      const serviceSelect = document.getElementById(
-        "serviceLevel"
-      ) as HTMLSelectElement;
+// const calculateButton = document.querySelector("button");
+// if (calculateButton) {
+//     calculateButton.addEventListener("click", () => {
+//       // Werte aus den Eingabefeldern abrufen
+//       const billInput = document.getElementById("billAmount") as HTMLInputElement;
+//       const peopleInput = document.getElementById("numPeople") as HTMLInputElement;
+//       const serviceSelect = document.getElementById("serviceLevel") as HTMLSelectElement;
   
-      // Werte in Zahlen umwandeln
-      const billAmount = parseFloat(billInput.value);
-      const numPeople = parseInt(peopleInput.value, 10);
-      const serviceLevel = serviceSelect.value as 'bad' | 'average' | 'good';
+//       // Werte in Zahlen umwandeln
+//       const billAmount = parseFloat(billInput.value);
+//       const numPeople = parseInt(peopleInput.value, 10);
+//       const serviceLevel = serviceSelect.value as "bad" | "average" | "good";
   
-      // Funktion mit den Werten als Objekt aufrufen
-      CalculateTipAndSplit({ billAmount, numPeople, serviceLevel }); 
-    });
-  }
+//       // Funktion mit den Werten als Objekt aufrufen
+//       CalculateTipAndSplit({ billAmount, numPeople, serviceLevel }); 
+//     });
+//   }
 
 export default CalculateTipAndSplit

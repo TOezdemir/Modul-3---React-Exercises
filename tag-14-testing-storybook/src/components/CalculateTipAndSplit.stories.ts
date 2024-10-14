@@ -1,5 +1,6 @@
 import type { Meta, StoryObj} from '@storybook/react';
 import CalculateTipAndSplit from './CalculateTipAndSplit';
+import { within } from '@storybook/test';
 
 const meta = {
   title: 'Components/TipCalculator',
@@ -29,7 +30,12 @@ export const TwoThree: Story ={
     billAmount: 23,
     numPeople: 2,
     serviceLevel: "good",
-    }}
+    },
+    play: (context) =>{
+      const canvas = within(context.canvasElement)
+      canvas.findByRole("", {name: ""})
+    }
+  }
 
 export const ThreeSixFive: Story ={
 args: {

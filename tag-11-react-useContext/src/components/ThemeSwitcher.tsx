@@ -14,12 +14,12 @@ function ThemeSwitcher(){
     const {theme, toggleTheme} = useThemeContext()
     return(
         <button className="py-2 px-2 cursor-pointer text-lg"
-        onClick={toggleTheme}>Switch Theme (current: {" "}
-        { theme === "light" 
+        onClick={toggleTheme}>Switch Theme (current: {theme})
+        {/* { theme === "light" 
         ? "light" 
         : theme === "dark" 
         ? "dark" 
-        : "blue"})</button>
+        : "blue"})*/}</button> 
     )
 }
 

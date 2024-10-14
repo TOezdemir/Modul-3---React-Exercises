@@ -23,8 +23,6 @@ export function ThemeContextProvider({children}: ThemeContextProviderProps){
                     return "blue";
                 case "blue":
                     return "light"
-                default:
-                    return "light"
             }
         })
 

@@ -28,7 +28,7 @@ function BirthdayForm() {
     return (
         <div className="font-sans flex flex-col items-center justify-center min-h-screen bg-gray-100">
             <div className="bg-white p-6 rounded-lg shadow-md max-w-sm"> 
-                <h2 className="text-2xl font-semibold mb-4 text-center">Prüfe hier nach deinem Geburtstag!
+                <h2 className="text-2xl font-semibold mb-4 text-center">Hast du heute vielleicht Geburtstag?!
                 <p className="text-sm mt-1">Alle die heute Geburtstag haben, haben besonders Glück, diese Seite gefunden zu haben!</p>
                 </h2>
                 <div className="mb-4">

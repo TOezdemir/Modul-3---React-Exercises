@@ -18,7 +18,7 @@ function BirthdayForm() {
         ) {
           alert(`Alles Gute zum Geburtstag, ${name}!`);
         } else {
-          alert(`Watt willse, ${name}?`);
+          alert(`HEUTE IST NICHT DEIN GEBURTSTAG, ${name}!!!!! >:]`);
         }
       } else {
         alert('Bitte gib deinen Namen und dein Geburtsdatum ein.');

@@ -21,7 +21,7 @@ function BirthdayForm() {
           alert(`HEUTE IST NICHT DEIN GEBURTSTAG, ${name}!!!!! >:]`);
         }
       } else {
-        alert('Bitte gib deinen Namen und dein Geburtsdatum ein.');
+        alert("Bitte gib deinen Namen und dein Geburtsdatum ein.");
       }
     };
   

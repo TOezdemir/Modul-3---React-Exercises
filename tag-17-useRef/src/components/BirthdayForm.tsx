@@ -26,17 +26,32 @@ function BirthdayForm() {
     };
   
     return (
-      <div>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" ref={nameRef} /> {/* Unkontrollierter Input mit ref */}
-        </div>
-        <div>
-          <label htmlFor="geburtstag">Geburtstag:</label>
-          <input type="date" id="geburtstag" ref={geburtstagRef} /> {/* Unkontrollierter Input mit ref */}
-        </div>
-        <button onClick={geburtstagPruefen}>Prüfen</button>
-      </div>
+<div className="font-sans flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div className="bg-white p-6 rounded-lg shadow-md max-w-sm"> 
+    <h2 className="text-2xl font-semibold mb-4 text-center">Geburtstag prüfen</h2>
+    <div className="mb-4">
+      <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name:</label>
+      <input type="text" id="name"
+        ref={nameRef} 
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+      />
+    </div>
+    <div className="mb-6">
+      <label htmlFor="geburtstag"
+        className="block text-gray-700 font-medium mb-2">Geburtstag:</label>
+      <input type="date" id="geburtstag" 
+        ref={geburtstagRef} 
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+      />
+    </div>
+    <button 
+        onClick={geburtstagPruefen} 
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    >
+      Prüfen 
+    </button>
+  </div>
+</div>
     );
   };
   

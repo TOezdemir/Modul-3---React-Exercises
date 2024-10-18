@@ -1,6 +1,5 @@
 import { useRef } from "react"
 
-
 export default function Calculator(){
 
     const sizeRef = useRef<HTMLInputElement>(null)
@@ -26,7 +25,6 @@ export default function Calculator(){
         const bmrkj: number = bmr * 4.4
         const tdee = bmr * activity
         const tdeekj = (bmr * activity) * 4.4
-
 
         document.getElementById("bmr")!.textContent = bmr.toFixed(2)
         document.getElementById("tdee")!.textContent = tdee.toFixed(2)

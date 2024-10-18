@@ -11,6 +11,7 @@ function BirthdayForm() {
       if (name && geburtstag) {
         const heute = new Date();
         const geburtsdatum = new Date(geburtstag);
+        // const tolgadatum = new Date(new Date().getFullYear(), 5, 29)
   
         if (
           heute.getDate() === geburtsdatum.getDate() &&
